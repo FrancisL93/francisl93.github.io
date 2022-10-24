@@ -1,15 +1,14 @@
 ---
-image: /assets/img/coding.jpg
 layout: post
 title: Microshell_exam
 date: 2022-10-24 13:16 -0400
 categories: [Coding]
 tags: [exam, microshell]
 img_path: /assets/img/
+image: /assets/img/coding.jpg
 ---
 # After minishell... MICROSHELL!
-![coding](coding.jpg)
-## My mind process to solve the exam:
+## No one asked, but here is my mind process to solve the exam:
 
 ### 1-First I start my main structure:
 ```c
@@ -39,26 +38,40 @@ typedef struct s_vars
 
 int	main(int argc, char **argv, char **envp) {
 	t_vars vars; //locally declared -> malloc/free not needed!
+
+	if (argc ==1) {
+		return (1);
+	}
 }
 ```
 ### 4-Allocate the right memory to struct variables
 ```c
+#include <string.h> // strcmp library
+#include <stdlib.h> // malloc library
+
+//count the number of commands... ex: "/bin/ls -lia ";" /bin/ls" -> = 2
 int	count_commands(char **argv) {
 	int count = 1;
 
 	for (int j = 0; argv[j]; j++){
 		if (!strcmp(argv[j], "|") || strcmp(argv[j], ";"))
 			count++;
-		}
+	}
 	return (count);
 }
-//Inside the main
+
+int	main(int argc, char **argv, char **envp) {
+	t_vars vars;
+
+	if (argc ==1) {
+		return (1);
+	}
 	vars.position = malloc(sizeof(int) * count_commands(argv));
 	vars.cmds = malloc(sizeof(char **) * count_commands(argv));
-	//In exam I don't care for errors...
-
+	//In exam, I don't care for malloc errors...
+}
 ```
-
+### 5-
 
 ```c
 int	ft_strlen(char *str) {
@@ -68,3 +81,5 @@ int	ft_strlen(char *str) {
 	}
 	return (count);
 }
+
+```
