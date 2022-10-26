@@ -32,8 +32,8 @@ int	main(int argc, char **argv, char **envp) {
 ```c
 typedef struct s_vars
 {
-	int		fd[2]; //2 fds for when we will call pipe(vars->fd)
-	int		*position; //If the command is the last or first of a sequence
+	int	fd[2]; //2 fds for when we will call pipe(vars->fd)
+	int	*position; //If the command is the last or first of a sequence
 	char	***cmds; //To place commands and their arguments in a "diagram"
 } t_vars;
 
