@@ -51,9 +51,11 @@ layout: page
 			{{ content | markdownify | strip_html | truncate: 200 | escape }}
 		</p>
     </div>
-	{% if post.image %}
-		<img src={{ post.image }} alt="coding" width="500" height="200">
-	{% endif %}
+	<div>
+		{% if post.image %}
+			<img src={{ post.image }} alt="coding" width="500" height="200">
+		{% endif %}
+	</div>
     <div class="post-meta text-muted d-flex">
       <div class="mr-auto">
 
