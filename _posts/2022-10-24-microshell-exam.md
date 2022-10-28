@@ -9,7 +9,7 @@ image: /assets/img/coding.jpg
 ---
 # After minishell... MICROSHELL!
 
-For the complete code version of my microshell: [Microshell GitHub repo](url:https://github.com/FrancisL93/microshell_exam_test)
+For the complete code version of my microshell: [Microshell GitHub repo](https://github.com/FrancisL93/microshell_exam_test)
 
 ## No one asked, but here is my mind process to solve the exam:
 
